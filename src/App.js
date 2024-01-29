@@ -1,11 +1,15 @@
-import './App.css';
+import "./App.css";
+import Header from "./Components/Header/Header";
+
+import Home from "./Components/Home/Home";
 
 function App() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">
-      Registeration Portal
-    </h1>
+      <Header />
+      
+        <Home />
+        
       
     </div>
   );
