@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import courseModel from "../../raw_data";
 import CoursePreview from "./CoursePreview";
 import CourseSelected from "../Student/CourseSelected";
@@ -9,6 +10,7 @@ const Home = () => {
  
   {
     localStorage.setItem("id", courseID);
+    localStorage.setItem("courseRegistered", Selected);
   }
 
   return (
@@ -47,6 +49,7 @@ const Home = () => {
           ))}
         </div>
         <CourseSelected l={Selected} />
+        <button className="bg-cyan-400 w-36 h-12 text-xl rounded-lg text-white "><Link to="/StudentDashboard">Register</Link></button>
       </div>
       <CoursePreview id={courseID} />
     </div>
