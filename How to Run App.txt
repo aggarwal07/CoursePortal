@@ -1,0 +1,7 @@
+1) clone the git repo to local directory
+2) install react by npx create-react-app my-app
+3) install react-router dom by npm i react-router-dom
+4)run the app on local host by npm run start
+			OR
+
+view the app through vercel deployed link. the project had been deployed through vercel.
