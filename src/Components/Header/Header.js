@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Reset from './Reset';
 
 const Header = () => {
   const [name, setName] = useState('');
@@ -20,28 +21,34 @@ const Header = () => {
         </Link>
       </h1>
 
-      <div className='relative left-96 flex flex-col mt-20'>
+      <div className='relative left-96 flex items-center'>
+        <div className='flex flex-col'>
+
         <input
           className='border p-2 w-60 h-8 text-lg rounded-lg font-semibold'
           placeholder='Name'
           type='text'
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
+          />
         <input
           className='border p-2 w-60 h-8 mt-2 text-lg rounded-lg font-semibold'
           placeholder='Roll Number'
           type='text'
           value={roll}
           onChange={(e) => setRoll(e.target.value)}
-        />
+          />
+          </div>
          <button
         style={buttonStyle}
-        className='bg-blue-500 text-white p-2 mt-5 rounded-md cursor-pointer'
+        className='bg-blue-500 text-white p-2 h-18 ml-2 rounded-md cursor-pointer'
         onClick={handleLogin}
       >
-          Login
+          Go
         </button>
+        <div className='ml-28'>
+          <Reset/>
+        </div>
       </div>
     </div>
   );
